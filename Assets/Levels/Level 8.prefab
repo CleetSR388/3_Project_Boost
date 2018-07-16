@@ -59,7 +59,6 @@ GameObject:
   - component: {fileID: 65008347200157628}
   - component: {fileID: 23517003955886828}
   - component: {fileID: 114709956355568654}
-  - component: {fileID: 114360307346509850}
   m_Layer: 0
   m_Name: Blocker (4)
   m_TagString: Untagged
@@ -96,8 +95,6 @@ GameObject:
   - component: {fileID: 33483548545125800}
   - component: {fileID: 65583383991673900}
   - component: {fileID: 23457867463411746}
-  - component: {fileID: 114975870422177140}
-  - component: {fileID: 114226779921628782}
   - component: {fileID: 114641162092484932}
   m_Layer: 0
   m_Name: Blocker (1)
@@ -153,8 +150,6 @@ GameObject:
   - component: {fileID: 33551135610648954}
   - component: {fileID: 65763181451665692}
   - component: {fileID: 23086530266618086}
-  - component: {fileID: 114634239746981524}
-  - component: {fileID: 114615854738336862}
   - component: {fileID: 114326144148290066}
   m_Layer: 0
   m_Name: Blocker
@@ -171,6 +166,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4023832965048302}
+  - component: {fileID: 82479684971715244}
   m_Layer: 0
   m_Name: Level 8
   m_TagString: Finish
@@ -262,7 +258,6 @@ GameObject:
   - component: {fileID: 65182603449372408}
   - component: {fileID: 23963721877250972}
   - component: {fileID: 114646838299513928}
-  - component: {fileID: 114311675812428588}
   m_Layer: 0
   m_Name: Blocker (3)
   m_TagString: Untagged
@@ -353,7 +348,6 @@ GameObject:
   - component: {fileID: 33671170394042676}
   - component: {fileID: 65741863389267912}
   - component: {fileID: 23967157617005526}
-  - component: {fileID: 114275672293598266}
   - component: {fileID: 114635081072051742}
   m_Layer: 0
   m_Name: Blocker (2)
@@ -414,7 +408,7 @@ Transform:
   m_GameObject: {fileID: 1359645913751870}
   m_LocalRotation: {x: 0.02589707, y: -0.31433746, z: -0.9488289, w: 0.015659817}
   m_LocalPosition: {x: 44.272514, y: 12.351055, z: -0.6786003}
-  m_LocalScale: {x: 3.2143636, y: 44.327976, z: 30.520573}
+  m_LocalScale: {x: 3.2143636, y: 44.327976, z: 54.87497}
   m_Children: []
   m_Father: {fileID: 4023832965048302}
   m_RootOrder: 5
@@ -466,7 +460,7 @@ Transform:
   m_GameObject: {fileID: 1681393612017582}
   m_LocalRotation: {x: 0.02589707, y: -0.31433746, z: -0.9488289, w: 0.015659817}
   m_LocalPosition: {x: 43.784958, y: 30.89153, z: 1.0793853}
-  m_LocalScale: {x: 3.2143636, y: 44.327976, z: 30.520565}
+  m_LocalScale: {x: 3.2143636, y: 44.327976, z: 54.874958}
   m_Children: []
   m_Father: {fileID: 4023832965048302}
   m_RootOrder: 4
@@ -1581,45 +1575,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114226779921628782
-MonoBehaviour:
+--- !u!82 &82479684971715244
+AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1266618827822766}
+  m_GameObject: {fileID: 1393659825004296}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeec6a5fede58db45ac1c2a3cf56b496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 40, z: 0}
-  period: 3
---- !u!114 &114275672293598266
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1929116470327928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeec6a5fede58db45ac1c2a3cf56b496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 20, z: 0}
-  period: 2
---- !u!114 &114311675812428588
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1710178453657570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeec6a5fede58db45ac1c2a3cf56b496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 40, z: 0}
-  period: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: aac1a141a6d505c44967b999d5c3bfd9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114326144148290066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1632,46 +1667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 20, z: 0}
-  period: 3
---- !u!114 &114360307346509850
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1195584793152198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeec6a5fede58db45ac1c2a3cf56b496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 60, z: 0}
-  period: 2
---- !u!114 &114615854738336862
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1378251780747882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeec6a5fede58db45ac1c2a3cf56b496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 40, z: 0}
-  period: 3
---- !u!114 &114634239746981524
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1378251780747882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeec6a5fede58db45ac1c2a3cf56b496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 20, z: 0}
-  period: 2
+  period: 6
 --- !u!114 &114635081072051742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1697,7 +1693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 20, z: 0}
-  period: 3
+  period: 4
 --- !u!114 &114646838299513928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1710,7 +1706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 20, z: 0}
-  period: 2
+  period: 4
 --- !u!114 &114709956355568654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1722,18 +1718,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeec6a5fede58db45ac1c2a3cf56b496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 20, z: 0}
-  period: 2
---- !u!114 &114975870422177140
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1266618827822766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeec6a5fede58db45ac1c2a3cf56b496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 20, z: 0}
+  movementVector: {x: 0, y: 30, z: 0}
   period: 2
