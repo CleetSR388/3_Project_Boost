@@ -14,7 +14,7 @@ public class Rocket : MonoBehaviour
     [SerializeField] ParticleSystem mainEngineParticles;
     [SerializeField] ParticleSystem successParticles;
     [SerializeField] ParticleSystem deathParticles;
-    
+
     Rigidbody rigidBody;
     AudioSource audioSource;
 
@@ -42,6 +42,7 @@ public class Rocket : MonoBehaviour
             RespondToDebugKeys();
         }
     }
+
     private void RespondToDebugKeys()
     {
         if (Input.GetKeyDown(KeyCode.L))
@@ -53,11 +54,11 @@ public class Rocket : MonoBehaviour
             collisionsDisabled = !collisionsDisabled; // toggle
         }
     }
-    
+
 
     void OnCollisionEnter(Collision collision)
     {
-            if (isTransitioning || collisionsDisabled) { return; }
+        if (isTransitioning || collisionsDisabled) { return; }
 
         switch (collision.gameObject.tag)
         {
@@ -79,8 +80,7 @@ public class Rocket : MonoBehaviour
         audioSource.Stop();
         audioSource.PlayOneShot(success);
         successParticles.Play();
-        Invoke("LoadNextLevel", levelLoadDelay); 
-        
+        Invoke("LoadNextLevel", levelLoadDelay);
     }
 
     private void StartDeathSequence()
@@ -89,7 +89,7 @@ public class Rocket : MonoBehaviour
         audioSource.Stop();
         audioSource.PlayOneShot(death);
         deathParticles.Play();
-        Invoke("LoadFirstLevel", levelLoadDelay);
+        Invoke("LoadCurrentLevel", levelLoadDelay);
     }
 
     private void LoadNextLevel()
@@ -98,14 +98,20 @@ public class Rocket : MonoBehaviour
         int nextSceneIndex = currentSceneIndex + 1;
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
-            nextSceneIndex = 0; // loop back to start
+            LoadFirstLevel(); // loop back to start
         }
         SceneManager.LoadScene(nextSceneIndex);
     }
 
+    private void LoadCurrentLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
     private void LoadFirstLevel()
     {
-        SceneManager.LoadScene(0); 
+        SceneManager.LoadScene(0);
     }
 
     private void RespondToThrustInput()
@@ -149,6 +155,5 @@ public class Rocket : MonoBehaviour
         {
             transform.Rotate(-Vector3.forward * rotationThisFrame);
         }
-
     }
 }
